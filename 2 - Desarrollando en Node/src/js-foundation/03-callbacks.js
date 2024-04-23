@@ -1,22 +1,24 @@
 const users = [
   {
     id: 1,
-    name: 'John Doe'
+    name: "John Doe",
   },
   {
-    id:1,
-    name: "laur jae"
-  }
+    id: 2,
+    name: "laur jae",
+  },
 ];
 
-function getUserById( id ){
-
-  const user = users.find(function (user){
+function getUserById(id, callback) {
+  const user = users.find(function (user) {
     return user.id === id;
-  })
+  });
 
-  //console.log({user:user})
+  if (!user) {
+    return callback(`User not found with id ${id}`);
+  }
 
+  return callback(null, user);
 }
 
-module.exports = {getUserById}
+module.exports = { getUserById };
