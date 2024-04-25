@@ -6,7 +6,7 @@ const {getUserById} = require('./js-foundation/03-callbacks');
 //console.log(emailTemplate);
 
 const id = 2;
-getUserById(id, function(error, user){
+getUserById(id, (error, user) => {
   if(error){
     throw new Error(`USUARIO ${id} no encontrado`);
   }
