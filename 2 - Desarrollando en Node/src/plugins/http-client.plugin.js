@@ -1,8 +1,11 @@
+const axios = require('axios');
+
 const httpClientPlugin = {
   
   get: async(url)  => {
-    const response = await fetch( url );
-    return await response.json();
+    //se puede hacer tambien const { data } = await axios.get(url);
+    const response = await axios.get( url );
+    return response.data;
   },
   post: async(url, data) => {
     
