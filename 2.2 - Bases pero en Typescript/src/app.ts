@@ -1,10 +1,13 @@
 // const {emailTemplate} = require('./js-foundation/01-template');
 //const {getAge, getId} = require('./plugins');
 
+import { buildLogger } from "./plugins/logger.plugin";
+
 // require('./js-foundation/02-destructuring');
 // require('./js-foundation/03-callbacks');
 // const {getUserById} = require('./js-foundation/03-callbacks');
 
+/*
 const getPokemonById = require('./js-foundation/06-promises');
 
 getPokemonById(2)
@@ -12,6 +15,10 @@ getPokemonById(2)
   .catch(error => console.error("Error aqui", error))
   .finally( () => console.log("Finally"))
 
+*/
+const logger = buildLogger('app.js');
+logger.log('Hola mundo');
+logger.error('Esto es algo malo')
 
 
 // //console.log(emailTemplate);

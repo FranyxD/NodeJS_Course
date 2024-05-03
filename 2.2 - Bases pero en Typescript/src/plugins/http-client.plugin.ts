@@ -2,18 +2,18 @@ const axios = require('axios');
 
 const httpClientPlugin = {
   
-  get: async(url)  => {
+  get: async(url:string)  => {
     //se puede hacer tambien const { data } = await axios.get(url);
     const response = await axios.get( url );
     return response.data;
   },
-  post: async(url, data) => {
+  post: async(url:string, data:string) => {
     
   },
-  put: async(url, data) => {
+  put: async(url:string, data:string) => {
     
   },
-  delete: async(url) => {
+  delete: async(url:string) => {
     
   },
   
