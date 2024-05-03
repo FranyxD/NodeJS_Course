@@ -1,12 +1,5 @@
-const { v4: uuidv4 } = require("uuid");
+import {v4 as uuidv4} from 'uuid';
 
-const getId = () => {
-  if (!uuidv4) {
-    throw new Error("Error: uuidv4 function not found");
-  }
+export const getId = () => {
   return uuidv4();
 };
-
-module.exports = {
-    getId,
-}
