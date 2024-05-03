@@ -5,14 +5,14 @@
 // require('./js-foundation/03-callbacks');
 // const {getUserById} = require('./js-foundation/03-callbacks');
 
-/*const getPokemonById = require('./js-foundation/06-promises');
+const getPokemonById = require('./js-foundation/06-promises');
 
 getPokemonById(2)
   .then((pokemon) => console.log(pokemon))
   .catch(error => console.error("Error aqui", error))
   .finally( () => console.log("Finally"))
 
-*/
+
 
 // //console.log(emailTemplate);
 
